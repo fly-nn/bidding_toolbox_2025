@@ -389,6 +389,10 @@ vacation_award_join <- vacation_award %>%
   left_join(rank_vacation_award, by = c("seniority", "fleet")) %>% 
   select(-matches(".*\\.y$")) %>% 
   arrange(seniority)
+```
+
+```{r}
+#| label: build-vaca-award-datatable
 
 ### Build Award Datatable ###
 
@@ -400,7 +404,7 @@ vacation_award_join %>%
     rownames = F,
     filter = "top",
     options = list(
-      paging = TRUE,
+      paging = FALSE,
       pageLength = 25,
       autoWidth = TRUE,
       #    scrollY="100vh",
