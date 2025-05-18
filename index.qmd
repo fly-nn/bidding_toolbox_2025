@@ -1,0 +1,411 @@
+---
+title: "NJASAP Bidding Aid"
+format: dashboard
+logo: images/skype_icon.png
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(readxl)
+library(ggplot2)
+library(scales)
+library(lubridate)
+library(glue)
+library(ggtext)
+library(DT)
+```
+
+# Schedule Dist (All Fleets)
+
+## row {.tabset}
+
+### 7&7
+
+![](images/7_7_Global_Line_Dist_Snrty.png)
+
+### 8&6
+
+![](images/8_6_Global_Line_Dist_Snrty.png)
+
+# 7&7 PIC
+
+## row {.tabset}
+
+### CE-560XL
+
+![](images/Line_Dists/7&7_CE-560XL_PIC.png)
+
+### CE-680
+
+![](images/Line_Dists/7&7_CE-680_PIC.png)
+
+### CE-680AS
+
+![](images/Line_Dists/7&7_CE-680AS_PIC.png)
+
+### CE-700
+
+![](images/Line_Dists/7&7_CE-700_PIC.png)
+
+### CL-350S
+
+![](images/Line_Dists/7&7_CL-350S_PIC.png)
+
+### CL-650S
+
+![](images/Line_Dists/7&7_CL-650S_PIC.png)
+
+### EMB-505S
+
+![](images/Line_Dists/7&7_EMB-505S_PIC.png)
+
+### GL6000S
+
+![](images/Line_Dists/7&7_GL6000S_PIC.png)
+
+### GL7500
+
+![](images/Line_Dists/7&7_GL7500_PIC.png)
+
+# 7&7 SIC
+
+## row {.tabset}
+
+### CE-560XL
+
+![](images/Line_Dists/7&7_CE-560XL_SIC.png)
+
+### CE-680
+
+![](images/Line_Dists/7&7_CE-680_SIC.png)
+
+### CE-680AS
+
+![](images/Line_Dists/7&7_CE-680AS_SIC.png)
+
+### CE-700
+
+![](images/Line_Dists/7&7_CE-700_SIC.png)
+
+### CL-350S
+
+![](images/Line_Dists/7&7_CL-350S_SIC.png)
+
+### CL-650S
+
+![](images/Line_Dists/7&7_CL-650S_SIC.png)
+
+### EMB-505S
+
+![](images/Line_Dists/7&7_EMB-505S_SIC.png)
+
+### GL6000S
+
+![](images/Line_Dists/7&7_GL6000S_SIC.png)
+
+### GL7500
+
+![](images/Line_Dists/7&7_GL7500_SIC.png)
+
+# 8&6 PIC
+
+## row {.tabset}
+
+### CE-560XL
+
+![](images/Line_Dists/8&6_CE-560XL_PIC.png)
+
+### CE-680
+
+![](images/Line_Dists/8&6_CE-680_PIC.png)
+
+### CE-680AS
+
+![](images/Line_Dists/8&6_CE-680AS_PIC.png)
+
+### CE-700
+
+![](images/Line_Dists/8&6_CE-700_PIC.png)
+
+### CL-350S
+
+![](images/Line_Dists/8&6_CL-350S_PIC.png)
+
+### CL-650S
+
+![](images/Line_Dists/8&6_CL-650S_PIC.png)
+
+### EMB-505S
+
+![](images/Line_Dists/8&6_EMB-505S_PIC.png)
+
+### GL6000S
+
+![](images/Line_Dists/8&6_GL6000S_PIC.png)
+
+### GL7500
+
+![](images/Line_Dists/8&6_GL7500_PIC.png)
+
+# 8&6 SIC
+
+## row {.tabset}
+
+### CE-560XL
+
+![](images/Line_Dists/8&6_CE-560XL_SIC.png)
+
+### CE-680
+
+![](images/Line_Dists/8&6_CE-680_SIC.png)
+
+### CE-680AS
+
+![](images/Line_Dists/8&6_CE-680AS_SIC.png)
+
+### CE-700
+
+![](images/Line_Dists/8&6_CE-700_SIC.png)
+
+### CL-350S
+
+![](images/Line_Dists/8&6_CL-350S_SIC.png)
+
+### CL-650S
+
+![](images/Line_Dists/8&6_CL-650S_SIC.png)
+
+### EMB-505S
+
+![](images/Line_Dists/8&6_EMB-505S_SIC.png)
+
+### GL6000S
+
+![](images/Line_Dists/8&6_GL6000S_SIC.png)
+
+### GL7500
+
+![](images/Line_Dists/8&6_GL7500_SIC.png)
+
+# Line Visualizer {scrolling="true"}
+
+## row {.tabset}
+
+### 7&7
+
+#### column {.tabset}
+
+##### 2024 7&7 Line 2
+![](images/2024_prod/7_7_Line_2.png)
+
+##### 3
+![](images/2024_prod/7_7_Line_3.png)
+
+##### 4
+![](images/2024_prod/7_7_Line_4.png)
+
+##### 5
+![](images/2024_prod/7_7_Line_5.png)
+
+##### 6
+![](images/2024_prod/7_7_Line_6.png)
+
+##### 7
+![](images/2024_prod/7_7_Line_7.png)
+
+##### 9
+![](images/2024_prod/7_7_Line_9.png)
+
+##### 10
+![](images/2024_prod/7_7_Line_10.png)
+
+##### 11
+![](images/2024_prod/7_7_Line_11.png)
+
+##### 12
+![](images/2024_prod/7_7_Line_12.png)
+
+##### 13
+![](images/2024_prod/7_7_Line_13.png)
+
+##### 14
+![](images/2024_prod/7_7_Line_14.png)
+
+
+
+#### column {.tabset}
+
+##### 2025 7&7 Line 2
+![](images/2025_prod/7_7_Line_2.png)
+
+##### 3
+![](images/2025_prod/7_7_Line_3.png)
+
+##### 4
+![](images/2025_prod/7_7_Line_4.png)
+
+##### 5
+![](images/2025_prod/7_7_Line_5.png)
+
+##### 6
+![](images/2025_prod/7_7_Line_6.png)
+
+##### 7
+![](images/2025_prod/7_7_Line_7.png)
+
+##### 9
+![](images/2025_prod/7_7_Line_9.png)
+
+##### 10
+![](images/2025_prod/7_7_Line_10.png)
+
+##### 11
+![](images/2025_prod/7_7_Line_11.png)
+
+##### 12
+![](images/2025_prod/7_7_Line_12.png)
+
+##### 13
+![](images/2025_prod/7_7_Line_13.png)
+
+##### 14
+![](images/2025_prod/7_7_Line_14.png)
+
+### 8&6
+
+#### column {.tabset}
+
+##### 2024 8&6 Line 2
+![](images/2024_prod/8_6_Line_2.png)
+
+##### 4
+![](images/2024_prod/8_6_Line_4.png)
+
+##### 6
+![](images/2024_prod/8_6_Line_6.png)
+
+##### 9
+![](images/2024_prod/8_6_Line_9.png)
+
+##### 11
+![](images/2024_prod/8_6_Line_11.png)
+
+##### 13
+![](images/2024_prod/8_6_Line_13.png)
+
+#### column {.tabset}
+
+##### 2025 8&6 Line 2
+![](images/2025_prod/8_6_Line_2.png)
+
+##### 4
+![](images/2025_prod/8_6_Line_4.png)
+
+##### 6
+![](images/2025_prod/8_6_Line_6.png)
+
+##### 9
+![](images/2025_prod/8_6_Line_9.png)
+
+##### 11
+![](images/2025_prod/8_6_Line_11.png)
+
+##### 13
+![](images/2025_prod/8_6_Line_13.png)
+
+# Seam Tables {orientation="columns"}
+
+## row {.tabset}
+
+### Example
+
+![](images/seam_tables/Example Table.png)
+
+### Monday Starts
+![](images/seam_tables/Seam Tables A Monday_Part1.png)
+![](images/seam_tables/Seam Tables A Monday_Part2.png)
+![](images/seam_tables/Seam Tables A Monday_Part3.png)
+![](images/seam_tables/Seam Tables A Monday_Part4.png)
+
+### Tuesday Starts
+![](images/seam_tables/Seam Tables A Tuesday_Part1.png)
+![](images/seam_tables/Seam Tables A Tuesday_Part2.png)
+
+### Wednesday Starts
+![](images/seam_tables/Seam Tables A Wednesday_Part1.png)
+![](images/seam_tables/Seam Tables A Wednesday_Part2.png)
+![](images/seam_tables/Seam Tables A Wednesday_Part3.png)
+![](images/seam_tables/Seam Tables A Wednesday_Part4.png)
+
+### Thursday Starts
+![](images/seam_tables/Seam Tables A Thursday_Part1.png)
+![](images/seam_tables/Seam Tables A Thursday_Part2.png)
+
+### Saturday Starts
+![](images/seam_tables/Seam Tables A Saturday_Part1.png)
+![](images/seam_tables/Seam Tables A Saturday_Part2.png)
+![](images/seam_tables/Seam Tables A Saturday_Part3.png)
+![](images/seam_tables/Seam Tables A Saturday_Part4.png)
+
+### Sunday Starts
+![](images/seam_tables/Seam Tables A Sunday_Part1.png)
+![](images/seam_tables/Seam Tables A Sunday_Part2.png)
+
+# 2024 Pilot Vacaton Award
+
+```{r}
+#| label: load-and-prep-vaca-award
+#| message: false
+
+### Imoort Vacation Spreadsheet ###
+
+vacation_award_file <- read_excel("~/OneDrive - NJASAP/_Action NJASAP/2024 - 2025 Pilot Vacation Awards PQ Build.xlsx", 
+                                                       sheet = "tVacaAward")
+vacation_award <- vacation_award_file %>% 
+  rename_with(~tolower(gsub(" ","_", .x))) %>% 
+  rename(seniority = "sen#") %>% 
+  mutate(start_date = as.Date(start_date), end_date = as.Date(end_date),
+         fleet = ifelse(fleet == "CE-680", "CE-680x", fleet))
+
+rm(vacation_award_file)
+
+### Rank by Fleet Seat ###
+
+rank_vacation_award <- vacation_award %>% 
+  arrange(seniority) %>% 
+  filter(week == "A") %>% 
+  select(seniority, fleet, seat) %>% 
+  group_by(fleet, seat) %>% 
+  mutate(fleet_rank = rank(seniority),
+         fleet_snrty = percent_rank(desc(seniority))
+  )
+  
+vacation_award_join <- vacation_award %>% 
+  left_join(rank_vacation_award, by = c("seniority", "fleet")) %>% 
+  select(-matches(".*\\.y$")) %>% 
+  arrange(seniority)
+
+### Build Award Datatable ###
+
+vacation_award_join %>% 
+  select(-name, -end_date, -week_number) %>% 
+  datatable(
+    colnames = c("Senioirty", "Fleet", "Seat", "Week", "Start Date",
+                 "No. Days", "Fleet Rank", "Flt. Pct. Rank"),
+    rownames = F,
+    filter = "top",
+    options = list(
+      paging = TRUE,
+      pageLength = 25,
+      autoWidth = TRUE,
+      #    scrollY="100vh",
+      scrollCollapse = FALSE
+    ),
+    caption = "2024-2025 NJASAP Vacation Award") %>% 
+  formatPercentage(8, digits = 1)
+```
